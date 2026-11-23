@@ -1,0 +1,84 @@
+:root {
+    /* Paleta predeterminada: Negro y Gris Claro */
+    --bg-color: #d3d3d3;         /* Gris claro de fondo */
+    --silhouette-color: #111111; /* Negro para siluetas (jugador, obstáculos, suelo) */
+    --water-color: #000000;      /* Negro intenso para el mar */
+    --text-color: #111111;       /* Color del texto */
+    --accent-color: #555555;     /* Gris medio para detalles/UI */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: center;
+    position: relative;
+}
+
+.hud {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+canvas {
+    background-color: var(--bg-color);
+    border-bottom: 4px solid var(--silhouette-color);
+    display: block;
+}
+
+.controls-info {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* Interfaz de Batalla contra Jefe */
+#battle-ui {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-color);
+    border: 3px solid var(--silhouette-color);
+    padding: 15px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 15px;
+    border: 2px solid var(--silhouette-color);
+    margin-top: 10px;
+}
+
+#battle-progress {
+    width: 0%;
+    height: 100%;
+    background-color: var(--silhouette-color);
+    transition: width 0.2s;
+}
