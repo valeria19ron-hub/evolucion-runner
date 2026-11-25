@@ -21,14 +21,15 @@ body {
     align-items: center;
     height: 100vh;
 }
-
 .game-container {
     background-color: var(--bg-color);
-    padding: 20px;
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     text-align: center;
     position: relative;
+    width: 96%;
+    max-width: 840px;
 }
 
 .hud {
@@ -44,8 +45,10 @@ canvas {
     background-color: var(--bg-color);
     border-bottom: 4px solid var(--silhouette-color);
     display: block;
+    width: 100%;
+    height: auto;
+    touch-action: none;
 }
-
 .controls-info {
     margin-top: 15px;
     font-size: 0.9rem;
